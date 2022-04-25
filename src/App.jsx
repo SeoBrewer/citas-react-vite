@@ -1,7 +1,7 @@
+import { useState, useEffect } from "react";
 import Formulario from "./Formulario";
 import Header from "./Header";
 import ListadoPacientes from "./ListadoPacientes";
-import { useState, useEffect } from "react";
 
 function App() {
   const [pacientes, setPacientes] = useState([]);
@@ -10,8 +10,8 @@ function App() {
     <div className="container mx-auto mt-20">
       <Header />
       <div className="mt-12 md:flex">
-        <Formulario />
-        <ListadoPacientes />
+        <Formulario pacientes={pacientes} setPacientes={setPacientes} />
+        <ListadoPacientes pacientes={pacientes} />
       </div>
     </div>
   );
