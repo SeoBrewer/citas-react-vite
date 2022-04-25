@@ -13,7 +13,6 @@ function App() {
       setPacientes(pacientesLS);
     };
     obtenerLS();
-    console.log(1);
   }, []);
 
   useEffect(() => {
